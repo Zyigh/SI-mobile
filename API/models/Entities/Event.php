@@ -39,6 +39,82 @@ class Event extends Entity
      * @var File
      */
     protected $file;
+    /**
+     * @var array
+     */
+    protected $registered = [];
+    /**
+     * @var array
+     */
+    protected $validated = [];
+    /**
+     * @var array
+     */
+    protected $tags = [];
+
+    /**
+     * @return File
+     */
+    public function getFile(): File
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param File $file
+     */
+    public function setFile(File $file): void
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRegistered(): array
+    {
+        return $this->registered;
+    }
+
+    /**
+     * @param array $registered
+     */
+    public function addRegistered(array $registered): void
+    {
+        $this->registered[] = $registered;
+    }
+
+    /**
+     * @return array
+     */
+    public function getValidated(): array
+    {
+        return $this->validated;
+    }
+
+    /**
+     * @param array $validated
+     */
+    public function addValidated(array $validated): void
+    {
+        $this->validated[] = $validated;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTags(): array
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param array $tags
+     */
+    public function addTags(array $tags): void
+    {
+        $this->tags[] = $tags;
+    }
 
     /**
      * @return Int

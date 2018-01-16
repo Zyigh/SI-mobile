@@ -22,7 +22,7 @@ class Message extends entity
     /**
      * @var String
      */
-    protected $message;
+    protected $content;
 
     /**
      * @return User
@@ -59,16 +59,16 @@ class Message extends entity
     /**
      * @return String
      */
-    public function getMessage(): String
+    public function getContent(): String
     {
-        return $this->message;
+        return $this->content;
     }
 
     /**
-     * @param String $message
+     * @param String $content
      */
-    public function setMessage(String $message): void
+    public function setContent(String $content): void
     {
-        $this->message = $message;
+        $this->content = $content;
     }
 }

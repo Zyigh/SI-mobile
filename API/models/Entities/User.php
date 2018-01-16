@@ -35,9 +35,9 @@ class User extends Entity
      */
     protected $whishlist;
     /**
-     * @var Int
+     * @var array
      */
-    protected $ranking;
+    protected $ranking = [];
     /**
      * @var array
      */
@@ -159,19 +159,19 @@ class User extends Entity
     }
 
     /**
-     * @return Int
+     * @return array
      */
-    public function getRanking(): Int
+    public function getRanking(): array
     {
         return $this->ranking;
     }
 
     /**
-     * @param Int $ranking
+     * @param Ranking $ranking
      */
-    public function setRanking(Int $ranking): void
+    public function addRanking(Ranking $ranking): void
     {
-        $this->ranking = $ranking;
+        $this->ranking[] = $ranking;
     }
 
     /**

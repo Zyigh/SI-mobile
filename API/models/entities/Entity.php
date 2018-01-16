@@ -9,12 +9,27 @@
 namespace Fidmi\Models\Entities;
 
 
+use Fidmi\Models\ORM\Query;
+use Fidmi\Models\ORM\Buffer;
+
 class Entity
 {
     /**
      * @var Int
      */
     protected $id;
+    /**
+     * @var Query
+     */
+    protected $buffer;
+
+    public function __construct()
+    {
+        foreach (func_get_args() as $param => $value) {
+            $this->{$param} = $value;
+        }
+        $this->buffer = new Buffer($this);
+    }
 
     /**
      * @return Int

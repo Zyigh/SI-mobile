@@ -16,9 +16,14 @@ class Connect
      * @var \PDO
      */
     private $connexion;
+    /**
+     * @var \PDOStatement | null
+     */
     private $stmt;
+    /**
+     * @var Connect
+     */
     private static $instance;
-    private $params = [];
 
     private function __construct(String $dbhost, String $dbname, String $dbport, String $dbuser, String $dbpass)
     {
@@ -41,29 +46,28 @@ class Connect
         return $this->connexion;
     }
 
-    public function prepareStmt(String $stmt = ""): self
+    public function prepareStmt(String $sql = ""): self
     {
-        $this->stmt = $this->connexion->prepare($stmt);
+        $this->stmt = $this->connexion->prepare($sql);
 
         return $this;
     }
 
-    public function setBindingParams(Array $params = []): self
+    public function setBindingParams(array $params = []): self
     {
-        foreach ($this->params as $paramName => $paramValue) {
+        foreach ($params as $paramName => $paramValue) {
             $this->stmt->bindValue($paramName, $paramValue["value"], $paramValue["type"]);
         }
         
         return $this;
     }
 
-    public function executeRequest(): Array
+    public function executeRequest(): array
     {
         $result = [];
         if (!is_null($this->stmt)) {
             $stmt = $this->stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_OBJ);
-            $this->params = [];
             $this->stmt = null;
         }
 

@@ -16,11 +16,11 @@ class Registered extends Entity
     /**
      * @var Int
      */
-    protected $userId;
+    protected $user;
     /**
      * @var Int
      */
-    protected $eventId;
+    protected $event;
     /**
      * @var Int
      */
