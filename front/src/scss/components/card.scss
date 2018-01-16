@@ -1,0 +1,26 @@
+.cards-container {
+    background: transparent;
+
+    .card {
+        margin: 8px 0;
+    }
+
+    .card__title {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        text-align: left;
+    }
+}
+
+.square-cards {
+    display: flex;
+
+    .list-item {
+        width: 50%;
+    }
+
+    .card__title {
+        
+    }
+}
+
