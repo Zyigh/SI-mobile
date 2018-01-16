@@ -15,10 +15,10 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `fidmi`
 --
-/*
+
 CREATE DATABASE IF NOT EXISTS `fidmi` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `fidmi`;
-*/
+
 -- --------------------------------------------------------
 
 --
