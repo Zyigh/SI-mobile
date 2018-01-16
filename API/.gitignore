@@ -1,6 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 ## all template
 
+### Specs
+conf.php
+
 ### Symfony
 /.web-server-pid
 /app/config/parameters.yml
