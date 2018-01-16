@@ -6,10 +6,29 @@
  * Time: 13:35
  */
 
-namespace Fidmi\Models;
+namespace Fidmi\Models\Entities;
 
 
 class Entity
 {
+    /**
+     * @var Int
+     */
     protected $id;
+
+    /**
+     * @return Int
+     */
+    public function getId(): Int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param Int $id
+     */
+    public function setId(Int $id): void
+    {
+        $this->id = $id;
+    }
 }

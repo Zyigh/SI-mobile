@@ -6,7 +6,7 @@
  * Time: 14:49
  */
 
-namespace Fidmi\Models;
+namespace Fidmi\Models\Database;
 
 use \PDO;
 
