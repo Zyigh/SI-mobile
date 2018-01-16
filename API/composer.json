@@ -1,0 +1,12 @@
+{
+    "name": "zyigh/dev",
+    "description": "Mobile app for school project",
+    "type": "project",
+    "require": {
+        "slim/slim": "^3.9"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.0"
+    },
+    "license": "MIT"
+}
