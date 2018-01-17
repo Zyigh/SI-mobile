@@ -23,7 +23,6 @@ export default {
   methods: {
     switchPage(url) {
       this.current = url;
-      // window.open('/' + url, "_blank");
     }
   }
 };
