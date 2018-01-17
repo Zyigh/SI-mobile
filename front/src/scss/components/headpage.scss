@@ -45,6 +45,11 @@
     @include title-lvl-1();
 }
 
+.headpage__subtitles {
+  display: flex;
+  justify-content: space-between;
+}
+
 .headpage__subtitle {
   margin: 0;
   @include title-lvl-2();

@@ -24,11 +24,10 @@
 
 .list-title__title {
   text-transform: uppercase;
-  font-family: $fontCdn;
-  font-size: 3rem;
+  @include title-lvl-2();
   font-weight: 400;
   padding-left: 0;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
   border-bottom: 2px solid $main-color;
 }
 
