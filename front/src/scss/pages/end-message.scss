@@ -1,0 +1,27 @@
+.end-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $main-color;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+
+  h1, p {
+    color: $white;
+  }
+}
+
+.end-message__inner {
+
+}
+
+.end-message__text {
+  max-width: 80%;
+  margin: 0 auto;
+  @include title-lvl-2();
+}
+
+.end-message__inner-bottom {
+  margin-top: 4rem;
+}

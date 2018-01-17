@@ -7,6 +7,7 @@ import Meal from '../pages/MealDetail.vue'
 import MealSignUp from '../pages/MealSignUp.vue'
 import MealForm from '../pages/MealForm.vue'
 import PageTabs from '../pages/PageTabs'
+import EndMessage from '../pages/EndMessage'
 
 Vue.use(Router);
 
@@ -45,6 +46,11 @@ export default new Router({
         path: '/mealform',
         name: 'MealForm',
         component: MealForm,
+      },
+      {
+        path: '/invitation-sent',
+        name: 'EndMessage',
+        component: EndMessage,
       }
     ]
 

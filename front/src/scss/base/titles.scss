@@ -35,3 +35,8 @@
 .title {
   @include title-lvl-1();
 }
+
+.title--white {
+  @include title-lvl-1();
+  // color: $white;
+}
