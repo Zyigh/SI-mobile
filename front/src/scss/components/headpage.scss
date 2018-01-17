@@ -1,0 +1,39 @@
+.headpage {
+  position: relative;
+  background: #eee;
+  padding-bottom: .5rem;
+}
+
+.headpage__top {
+  text-align: right;
+  margin-bottom: 8rem;
+}
+
+.headpage__inner {
+  padding-top: 3rem;
+}
+
+.headpage__reminder {
+  font-weight: 500;
+  font-size: 1.4rem;
+  @include text-with-border(#000);
+  font-family: $font;
+}
+
+.headtitle {
+  margin-bottom: 3rem;
+}
+
+.headpage__title {
+    margin: 0;
+    font-family: $fontCdn;
+    font-weight: 300;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+}
+
+.headpage__subtitle {
+  margin: 0;
+  font-family: $font;
+  font-size: 1.5rem;
+}

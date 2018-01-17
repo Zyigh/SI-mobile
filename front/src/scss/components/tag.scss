@@ -1,0 +1,25 @@
+.tag__list {
+  display: flex;
+
+  .tag:last-child {
+
+  }
+
+}
+
+.tag {
+  padding: .8rem 1rem;
+  margin-right: 1rem;
+  color: $white;
+  font-weight: 500;
+}
+
+.tag--lgreen {
+  @extend .tag;
+  background: #B8E986;
+}
+
+.tag--dgreen {
+  @extend .tag;
+  background: #219333;
+}

@@ -2,13 +2,14 @@
   display: flex;
   position: fixed;
   margin: auto;
-  max-width: 250px;
+  max-width: 280px;
   left: 0;
   right: 0;
   bottom: 2rem;
   background: #fff;
   border-radius: 25px;
   z-index: 20;
+  @include shadow--huge();
 }
 
 .ctabbar__link {
@@ -26,12 +27,12 @@
     color: #fff;
   }
 
+  &.selected .ctabbar__label {
+    color: $white;
+  }
+
 }
 
 .ctabbar__icon {
-
-}
-
-.ctabbar__label {
 
 }

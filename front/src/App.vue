@@ -1,7 +1,7 @@
 <template>
-  <v-ons-page id="app">
+  <div id="app">
     <router-view></router-view>
-  </v-ons-page>
+  </div>
 </template>
 
 
