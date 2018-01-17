@@ -1,0 +1,34 @@
+.ctabbar {
+  display: flex;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  background: #fff;
+  max-width: 220px;
+  border-radius: 25px;
+}
+
+.ctabbar__link {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: $main-color;
+
+  &.selected {
+    background: $main-color;
+    font-weight: 500;
+    border-radius: 25px;
+    color: #fff;
+  }
+
+}
+
+.ctabbar__icon {
+
+}
+
+.ctabbar__label {
+
+}

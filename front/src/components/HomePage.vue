@@ -36,6 +36,17 @@
       </v-ons-col>
     </v-ons-row>
 
+    <nav class="ctabbar">
+      <div @click="switchPage('/meals')" class="ctabbar__link">
+        <span class="ctabbar__label">Mes repas</span>
+      </div>
+      <div @click="switchPage('/home')" class="ctabbar__link">
+        <span class="ctabbar__label">Accueil</span>
+      </div>
+      <div @click="switchPage('/profile')" class="ctabbar__link" v-bind:class="{ current: 'selected' }">
+        <span class="ctabbar__label">Mon profil</span>
+      </div>
+    </nav>
   </v-ons-page>
 </template>
 
@@ -44,6 +55,7 @@ export default {
   name: "home",
   data() {
     return {
+      current: false,
       msg: "Fidmi",
       meals: [
         {
@@ -63,14 +75,45 @@ export default {
           hour: "19h",
           placesLeft: 1,
           imgUrl: ""
-        }
+        },
+        {
+          hostName: "Reininger",
+          hostSurname: "Ombeline",
+          mealName: "boeuf bourguignon",
+          date: "16/01/2018",
+          hour: "19h",
+          placesLeft: 1,
+          imgUrl: ""
+        },
+        {
+          hostName: "Reininger",
+          hostSurname: "Ombeline",
+          mealName: "boeuf bourguignon",
+          date: "16/01/2018",
+          hour: "19h",
+          placesLeft: 1,
+          imgUrl: ""
+        },{
+          hostName: "Reininger",
+          hostSurname: "Ombeline",
+          mealName: "boeuf bourguignon",
+          date: "16/01/2018",
+          hour: "19h",
+          placesLeft: 1,
+          imgUrl: ""
+        },
       ]
     };
   },
   methods: {
     goTo(url) {
       window.open(url, "_blank");
-    }
+    },
+
+    switchPage(url) {
+      console.log(this.current);
+      this.current = !this.current;
+    },
   }
 };
 </script>
