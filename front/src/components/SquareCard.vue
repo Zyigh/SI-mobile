@@ -5,7 +5,7 @@
     </div>
     <div class="meal">
       <div class="infos">
-        <div class="infos__date"> {{ meal.date }} {{ meal.hour }} </div>
+        <div class="infos__date"> {{ meal.date }} <span class="infos__hour">{{ meal.hour }}</span> </div>
         <div class="infos__plates"> {{ meal.placesLeft }} </div>
       </div>
       <div class="desc">
@@ -24,9 +24,9 @@ export default {
         {
           hostName: 'Salas',
           hostSurname: 'Olivia',
-          mealName: 'blanquette de veau',
+          mealName: 'Blanquette de veau',
           date: '16/01/2018',
-          hour: '19h',
+          hour: '19h00',
           placesLeft: 2,
           imgUrl: ""
         }

@@ -1,11 +1,9 @@
-$font: 'Knockout', Arial, sans-serif;
-
 html {
     font-size: 62.5%;
 }
 
-body {
-    font-family: $font;
+.page__background {
+    background: $white;
 }
 
 .page__content {

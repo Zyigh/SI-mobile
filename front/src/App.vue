@@ -1,7 +1,8 @@
 <template>
-  <div id="app">
+  <v-ons-page id="app">
     <router-view></router-view>
-  </div>
+    <square-card></square-card>
+  </v-ons-page>
 </template>
 
 
