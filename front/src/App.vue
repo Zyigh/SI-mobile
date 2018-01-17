@@ -1,19 +1,23 @@
 <template>
   <v-ons-page id="app">
-    <home-page></home-page>
+    <v-ons-toolbar class="home-toolbar">
+      <div class="center">{{ msg }}</div>
+    </v-ons-toolbar>
+
+    <square-card></square-card>
   </v-ons-page>
 </template>
 
 <script>
-import HomePage from './components/HomePage'
+import SquareCard from './components/SquareCard'
 
 export default {
   name: 'app',
   data () {
-    {}
+    msg: 'Fidmi'
   },
   components: {
-    HomePage
+    SquareCard
   }
 }
 </script>
