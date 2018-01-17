@@ -1,3 +1,11 @@
 html {
     font-size: 62.5%;
 }
+
+.page__content {
+    padding: 0 20px;
+
+    & > * {
+        padding-left: 0;
+    }
+}

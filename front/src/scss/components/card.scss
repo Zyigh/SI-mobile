@@ -6,9 +6,13 @@
     }
 
     .card__title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.2;
         text-align: left;
+    }
+
+    .list-item {
+        padding-left: 0;
     }
 }
 
@@ -16,7 +20,11 @@
     display: flex;
 
     .list-item {
-        width: 50%;
+        //width: 50%;
+
+        &:nth-child(2n+2){
+            padding-left: 20px;
+        }
     }
 
     .card__title {
