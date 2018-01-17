@@ -9,8 +9,10 @@
         "symfony/var-dumper": "^4.0"
     },
     "autoload": {
-        "files": ["./conf.php"],
-        "psr-4": {"Fidmi\\Models\\" : "models/"}
+        "psr-4": {
+            "Fidmi\\" : ""
+        },
+        "files": ["conf.php"]
     },
     "license": "MIT"
 }

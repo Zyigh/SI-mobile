@@ -9,6 +9,7 @@
 namespace Fidmi\Models\ORM;
 
 use Fidmi\Models\Entities\File;
+use Fidmi\Models\Entities\User;
 
 /**
  * Class Orm
@@ -35,5 +36,12 @@ class Orm
         }
 
         return self::$instance;
+    }
+
+    public function test():array
+    {
+        $adata = $this->buffer->test();
+
+        return $data;
     }
 }

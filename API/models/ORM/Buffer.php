@@ -10,6 +10,9 @@ namespace Fidmi\Models\ORM;
 
 
 use Fidmi\Models\Entities\Entity;
+use Fidmi\Models\Entities\File;
+use Fidmi\Models\Entities\Location;
+use Fidmi\Models\Entities\User;
 
 /**
  * Class Buffer
@@ -22,9 +25,31 @@ class Buffer
      * @var Entity
      */
     protected $entity;
-    protected $orm;
+    /**
+     * @var Query
+     */
+    protected $query;
 
     public function __construct()
     {
+        $this->query = Query::getInstance();
+    }
+
+    public function test(): array
+    {
+        $test_user = $this->query->test()[0];
+        $params = [
+            "id" => $test_user["id"],
+            "name" => $test_user["name"],
+            "location" => new Location(["id"=>$test_user["location"]]),
+            "email" => $test_user["email"],
+            "password" => $test_user["password"],
+            "salt" => $test_user["salt"],
+            "whishlist" => $test_user["whishlist"],
+            "file" => new File(["id" => $test_user["file"]])
+        ];
+
+        return $params;
+        return new User($params);
     }
 }

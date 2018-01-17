@@ -22,9 +22,31 @@ class Query
      * @var Connect
      */
     protected $database;
+    /**
+     * @var Query
+     */
+    private static $instance;
 
-    public function __construct()
+    private function __construct()
     {
         $this->database = Connect::getInstance();
+    }
+
+    public static function getInstance()
+    {
+        if (!isset(self::$instance)) {
+            self::$instance = new self;
+        }
+
+        return self::$instance;
+    }
+
+    public function test()
+    {
+        $sql = "SELECT * FROM USER WHERE `id` = :id";
+        return $this->database
+            ->prepareStmt($sql)
+            ->setBindingParams([":id" => ["value" => 1, "type" => \PDO::PARAM_INT]])
+            ->executeRequest();
     }
 }

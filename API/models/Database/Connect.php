@@ -34,7 +34,7 @@ class Connect
     public static function getInstance(): self
     {
         if (!isset(self::$instance)) {
-            self::$instance = new self(DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASS);
+            self::$instance = new self(DBHOST, DBNAME, DBPORT, DBUSER, DB_PASS);
         }
 
         return self::$instance;

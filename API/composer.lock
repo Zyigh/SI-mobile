@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "92cacbc256cad8401e51f1e6eac8261a",
+    "content-hash": "6071a7aa54358b5a81016d92a1d350f5",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -36,6 +36,52 @@
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "entomb/slim-json-api",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/entomb/slim-json-api.git",
+                "reference": "c11e001ab98e7df4dcb7b096fb1c9506d21c7e16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/entomb/slim-json-api/zipball/c11e001ab98e7df4dcb7b096fb1c9506d21c7e16",
+                "reference": "c11e001ab98e7df4dcb7b096fb1c9506d21c7e16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "jsonAPI/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Tavares",
+                    "email": "the.entomb@gmail.com",
+                    "homepage": "https://github.com/entomb",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Slim extension to implement fast JSON API's",
+            "homepage": "https://github.com/entomb/slim-json-api",
+            "keywords": [
+                "api",
+                "json",
+                "middleware",
+                "slim",
+                "view"
+            ],
+            "time": "2016-06-13T18:16:16+00:00"
         },
         {
             "name": "nikic/fast-route",
