@@ -34,7 +34,7 @@ class Connect
     public static function getInstance(): self
     {
         if (!isset(self::$instance)) {
-            self::$instance = new self(DBHOST, DBNAME, DBPORT, DBUSER, DB_PASS);
+            self::$instance = new self(DBHOST, DBNAME, DBPORT, DBUSER, DBPASS);
         }
 
         return self::$instance;
@@ -66,8 +66,8 @@ class Connect
     {
         $result = [];
         if (!is_null($this->stmt)) {
-            $stmt = $this->stmt->execute();
-            $result = $stmt->fetchAll(PDO::FETCH_OBJ);
+            $this->stmt->execute();
+            $result = $this->stmt->fetchAll(PDO::FETCH_OBJ);
             $this->stmt = null;
         }
 

@@ -40,7 +40,7 @@ class Orm
 
     public function test():array
     {
-        $adata = $this->buffer->test();
+        $data = $this->buffer->test();
 
         return $data;
     }
