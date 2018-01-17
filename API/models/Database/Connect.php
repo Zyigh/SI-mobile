@@ -70,7 +70,13 @@ class Connect
             $result = $this->stmt->fetchAll(PDO::FETCH_OBJ);
             $this->stmt = null;
         }
-
         return $result;
+    }
+
+    public function test()
+    {
+        $stmt = $this->connexion->prepare("SELECT * FROM user");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 }

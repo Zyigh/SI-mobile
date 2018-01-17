@@ -37,7 +37,7 @@ class Buffer
 
     public function test(): array
     {
-        $test_user = $this->query->test()[0];
+        $test_user = $this->query->test();
         $params = [
             "id" => $test_user["id"],
             "name" => $test_user["name"],

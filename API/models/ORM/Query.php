@@ -43,10 +43,42 @@ class Query
 
     public function test()
     {
-        $sql = "SELECT * FROM USER WHERE `id` = :id";
+        return $this->database->test();
+
+        $sql = "SELECT * FROM user WHERE id = :id";
         return $this->database
             ->prepareStmt($sql)
             ->setBindingParams([":id" => ["value" => 1, "type" => \PDO::PARAM_INT]])
             ->executeRequest();
+    }
+
+    public function getEventsListNoFilter()
+    {
+        $sql = "SELECT
+                  `event`.`title`,
+                  `event`.`date`,
+                  (`event`.`maxGuests` - (
+                      SELECT SUM(`registered`.`guestsNum`)
+                      FROM `registered`
+                      WHERE `registered`.`validated` = TRUE)
+                  ) as maxGuests,
+                  `user`.`name`
+                FROM
+                  `location`
+                INNER JOIN
+                  `user`
+                  ON
+                    `location`.`id` = `user`.`location`
+                INNER JOIN
+                  `event`
+                  ON
+                    `user`.`id` = `event`.`user`
+                WHERE
+                  `location`.`city` = ':city'
+                LIMIT
+                  10
+                OFFSET
+                  0
+          ;";
     }
 }

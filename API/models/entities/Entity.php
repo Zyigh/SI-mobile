@@ -18,10 +18,10 @@ class Entity
      * @var Int
      */
     protected $id;
-    /**
-     * @var Query
-     */
-    protected $buffer;
+//    /**
+//     * @var Query
+//     */
+//    protected $buffer;
 
     public function __construct()
     {
@@ -30,7 +30,7 @@ class Entity
                 $this->{$param} = $value;
             }
         }
-        $this->buffer = new Buffer($this);
+        //$this->buffer = new Buffer($this);
     }
 
     /**
@@ -47,5 +47,10 @@ class Entity
     public function setId(Int $id): void
     {
         $this->id = $id;
+    }
+
+    public function dumpAsArray()
+    {
+        return get_object_vars($this);
     }
 }
