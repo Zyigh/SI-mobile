@@ -15,6 +15,10 @@ class User extends Entity
      */
     protected $name;
     /**
+     * @var String
+     */
+    protected $surname;
+    /**
      * @var Location
      */
     protected $location;
@@ -51,37 +55,10 @@ class User extends Entity
      */
     protected $messages = [];
 
-    /**
-     * @return array
-     */
-    public function getMessages(): array
-    {
-        return $this->messages;
-    }
+    protected $avatarPath;
+    protected $bio;
 
-    /**
-     * @param array $messages
-     */
-    public function addMessages(array $messages): void
-    {
-        $this->messages[] = $messages;
-    }
 
-    /**
-     * @return File
-     */
-    public function getFile(): File
-    {
-        return $this->image;
-    }
-
-    /**
-     * @param File $image
-     */
-    public function setFile(File $image): void
-    {
-        $this->image = $image;
-    }
     /**
      * @return String
      */
@@ -96,6 +73,22 @@ class User extends Entity
     public function setName(String $name): void
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return String
+     */
+    public function getSurname(): String
+    {
+        return $this->surname;
+    }
+
+    /**
+     * @param String $surname
+     */
+    public function setSurname(String $surname): void
+    {
+        $this->surname = $surname;
     }
 
     /**
@@ -208,6 +201,38 @@ class User extends Entity
     public function setComments(array $comments): void
     {
         $this->comments = $comments;
+    }
+
+    /**
+     * @return File
+     */
+    public function getFile(): File
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param File $image
+     */
+    public function setFile(File $image): void
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMessages(): array
+    {
+        return $this->messages;
+    }
+
+    /**
+     * @param array $messages
+     */
+    public function addMessages(array $messages): void
+    {
+        $this->messages[] = $messages;
     }
 
 }

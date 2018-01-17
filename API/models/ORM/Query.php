@@ -81,4 +81,75 @@ class Query
                   0
           ;";
     }
+
+    public function getUsers()
+    {
+        $sql = "
+            SELECT
+            `id`,
+            `name`,
+            `surname`,
+            `location`,
+            `email`,
+            `password`,
+            `salt`,
+            `whishlist`,
+            `file`,
+            `bio`,
+            `avatarPath`
+            FROM
+            `user`
+        ";
+
+        return $this->database
+            ->prepareStmt($sql)
+            ->executeRequest();
+    }
+
+    public function getUserById($id)
+    {
+        $sql = "
+            SELECT 
+            `id` 
+            FROM 
+            `user` 
+            WHERE 
+            `id`= :id
+        ";
+
+        return $this->database
+            ->prepareStmt($sql)
+            ->setBindingParams( [':id'=>["value" => $id, "type" => \PDO::PARAM_INT]])
+            ->executeRequest();
+    }
+
+    public function getEvents()
+    {
+        $sql = "
+            SELECT `id`, `date`, `description`, `inscriptionDeadline`, `userId`, `title`, `maxGuests`, `file`, `picPath` FROM `event`
+        ";
+        return $this->database
+            ->executeRequest();
+    }
+
+    public function getEventById($id)
+    {
+        $sql = "
+            SELECT `id`, `date`, `description`, `inscriptionDeadline`, `userId`, `title`, `maxGuests`, `file`, `picPath` FROM `event` WHERE `id`= :id
+        ";
+
+        return $this->database
+            ->prepareStmt($sql)
+            ->setBindingParams( [':id'=>["value" => $id, "type" => \PDO::PARAM_INT]])
+            ->executeRequest();
+    }
+
+    public function getRanking($id)
+    {
+        $sql = "
+            SELECT `id`, `user`, `score` FROM `ranking` WHERE `id`=
+        ";
+
+    }
+
 }

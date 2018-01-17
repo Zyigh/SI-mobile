@@ -52,4 +52,28 @@ class Buffer
         return $params;
         return new User($params);
     }
+
+    /**
+     * @return Entity
+     */
+    public function getUser(): array
+    {
+        $user = $this->query->getUser();
+        $params = [
+            "id" => $user["id"],
+            "name" => $user["name"],
+            "surname" => $user["surname"],
+            "location" => new Location(["id"=>$user["location"]]),
+            "email" => $user["email"],
+            "password" => $user["password"],
+            "salt" => $user["salt"],
+            "whishlist" => $user["whishlist"],
+            "file" => new File(["id" => $user["file"]]),
+            "bio" => $user["bio"],
+            "avatarPath" => $user["avatarPath"]
+
+        ];
+
+        return new User($params);
+    }
 }
