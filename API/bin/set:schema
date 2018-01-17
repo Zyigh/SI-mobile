@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-php $PWD/bin/schema.php

@@ -147,9 +147,12 @@ class Query
     public function getRanking($id)
     {
         $sql = "
-            SELECT `id`, `user`, `score` FROM `ranking` WHERE `id`=
+            SELECT `id`, `user`, `score` FROM `ranking` WHERE `id` = :id
         ";
 
+        return $this->database
+            ->prepareStmt($sql)
+            ->setBindingParams( [':id'=>["value" => $id, "type" => \PDO::PARAM_INT]])
+            ->executeRequest();
     }
-
 }

@@ -44,4 +44,39 @@ class Orm
 
         return $data;
     }
+
+    public function getUsers()
+    {
+        $data = $this->buffer->getUsers();
+
+        return $data;
+    }
+
+    public function getUserById($id)
+    {
+        $data = $this->buffer->getUserById($id);
+
+        return $data;
+    }
+
+    public function getEvents()
+    {
+        $data = $this->buffer->getEvents();
+
+        return $data;
+    }
+
+    public function getEventById($id)
+    {
+        $data = $this->buffer->getEventById($id);
+
+        return $data;
+    }
+
+    public function getRanking($id)
+    {
+        $data = $this->buffer->getRanking($id);
+
+        return $data;
+    }
 }
