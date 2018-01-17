@@ -8,6 +8,8 @@
 
 namespace Fidmi\Models\ORM;
 
+use Fidmi\Models\Entities\File;
+
 /**
  * Class Orm
  * @package Fidmi\Models\ORM

@@ -25,8 +25,10 @@ class Entity
 
     public function __construct()
     {
-        foreach (func_get_args() as $param => $value) {
-            $this->{$param} = $value;
+        foreach (func_get_args() as $arg) {
+            foreach ($arg as $param => $value) {
+                $this->{$param} = $value;
+            }
         }
         $this->buffer = new Buffer($this);
     }

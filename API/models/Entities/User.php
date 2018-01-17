@@ -46,6 +46,26 @@ class User extends Entity
      * @var File
      */
     protected $file;
+    /**
+     * @var array
+     */
+    protected $messages = [];
+
+    /**
+     * @return array
+     */
+    public function getMessages(): array
+    {
+        return $this->messages;
+    }
+
+    /**
+     * @param array $messages
+     */
+    public function addMessages(array $messages): void
+    {
+        $this->messages[] = $messages;
+    }
 
     /**
      * @return File
