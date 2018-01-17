@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: "MealForm",
+  name: "MealSignUp",
   data() {
     return {
       msg: 'Fondue savoyarde chez Alison'
