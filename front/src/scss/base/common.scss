@@ -2,14 +2,10 @@ html {
     font-size: 62.5%;
 }
 
-.page__background {
-    background: $white;
+.page__inner {
+    padding: 0 20px;
 }
 
-.page__content {
-    padding: 0 20px;
-
-    & > * {
-        padding-left: 0;
-    }
+.page__background {
+    background: $white;
 }

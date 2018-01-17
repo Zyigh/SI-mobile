@@ -1,15 +1,14 @@
 <template>
-  <header>
-    <h1>Fidmi à Paris</h1>
+  <header class="headbar">
+    <h1>Fidmi à <span class="city">Paris</span></h1>
   </header>
 </template>
 
 <script>
 export default {
-  name: "ctabbar",
+  name: "headbar",
   data() {
     return {
-      current: 'home'
     }
   },
   methods: {

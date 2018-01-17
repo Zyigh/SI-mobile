@@ -17,11 +17,10 @@
 
 <script>
 export default {
-  name: 'home',
+  name: 'squarecard',
   data() {
     return {
-      meal: 
-        {
+      meal:{
           hostName: 'Salas',
           hostSurname: 'Olivia',
           mealName: 'Blanquette de veau',
