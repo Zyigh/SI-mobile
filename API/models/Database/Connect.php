@@ -75,8 +75,16 @@ class Connect
 
     public function test()
     {
-        $stmt = $this->connexion->prepare("SELECT * FROM user");
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
+        $sql = "SELECT * FROM `file`";
+        $this->prepareStmt($sql);
+        return $this->executeRequest();
+
+//        $stmt = $this->connexion->prepare("SELECT * FROM user");
+//        $stmt->execute();
+//        if ($stmt->errorCode() !== '00000') {
+//            throw new \PDOException(debug_backtrace()[1]['class'].'::'
+//                .debug_backtrace()[1]['function']);
+//        }
+//        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 }

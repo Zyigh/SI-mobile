@@ -17,8 +17,6 @@ class MainController extends Controller
     public function indexAction(array $args) : Response
     {
         try {
-            $file = new File(["id" => 1, "name"=>"lol"]);
-            dump($file->dumpAsArray());
             dump(Connect::getInstance()->test());
             //$data = Connect::getInstance()->prepareStmt("SELECT * FROM user")->executeRequest();
             //dump($data);
