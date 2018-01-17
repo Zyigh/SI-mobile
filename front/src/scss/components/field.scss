@@ -1,23 +1,74 @@
 .field {
-
+  margin-bottom: 3.5rem;
 }
+
+/**
+ * LABEL
+ * @type {[type]}
+ */
 
 .field__label {
   display: block;
-  text-transform: uppercase;
-  font-family: $fontCdn;
-  font-size: 2.4rem;
-  letter-spacing: 1.5px;
-  margin-bottom: .5rem;
+  @include title-lvl-2();
+  margin-bottom: 1rem;
 }
+
+.field__label--spacer {
+  @extend .field__label;
+  margin-bottom: 1.5rem;
+}
+
+/**
+ * INPUT TEXT
+ * @type {[type]}
+ */
 
 .field__input--text {
   width: 100%;
   border: 2px solid $main-color;
-  font-size: 2.4rem;
+  font-size: $size-2;
   border-radius: 25px;
   font-weight: lighter;
   padding: .5rem 1rem;
   font-family: $font;
   box-sizing: border-box;
+}
+
+/**
+ * BTNS
+ * @type {[type]}
+ */
+
+.field__btns {
+  display: flex;
+  align-items: center;
+}
+
+.field__btns-single {
+  display: block;
+  border: 1px solid $main-color;
+  color: $main-color;
+  font-size: $size-1;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.field__btns-value {
+  font-size: $size-2;
+  margin: 0 3rem;
+}
+
+/**
+ * TEXTAREA
+ */
+
+.field__textarea {
+  width: 100%;
+  border: 2px solid $main-color;
+  min-height: 200px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 25px;
 }

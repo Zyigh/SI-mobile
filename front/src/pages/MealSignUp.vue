@@ -29,7 +29,7 @@
           </div>
 
           <div class="btn__outer--centered mealform__form-footer">
-            <input type="submit" name="" value="S'inscrire" class="btn__orange--shadow">
+            <router-link to="/mealform" tag="button" class="btn__orange--shadow">S'inscrire</router-link>
             <a href="#" class="link__huge--orange">Se connecter</a>
           </div>
 

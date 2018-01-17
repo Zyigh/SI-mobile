@@ -5,6 +5,7 @@ import Home from '../pages/Home.vue'
 
 import Meal from '../pages/MealDetail.vue'
 import MealSignUp from '../pages/MealSignUp.vue'
+import MealForm from '../pages/MealForm.vue'
 import PageTabs from '../pages/PageTabs'
 
 Vue.use(Router);
@@ -36,9 +37,14 @@ export default new Router({
         component: Meal,
       },
       {
+        path: '/mealsignup',
+        name: 'MealSignUp',
+        component: MealSignUp,
+      },
+      {
         path: '/mealform',
         name: 'MealForm',
-        component: MealSignUp,
+        component: MealForm,
       }
     ]
 
