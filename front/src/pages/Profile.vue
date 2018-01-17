@@ -2,9 +2,6 @@
     <div class="profile page">
       <div class="headpage mealform__headpage">
         <div class="page__inner">
-          <div class="mealform__headpage-top">
-            <router-link to="/meal" tag="span" class="headpage__back">retour</router-link>
-          </div>
           <h1 class="headpage__title">{{ msg }}</h1>
         </div>
       </div>
