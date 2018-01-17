@@ -1,9 +1,15 @@
 .user {
+  display: flex;
   margin-bottom: 2rem;
 }
 
 .user__photo {
-
+  display: block;
+  background: $main-color;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin-right: 1.5rem;
 }
 
 .user__infos {
@@ -11,7 +17,8 @@
 }
 
 .user__name {
-  font-size: 3rem;
+  font-size: $size-2;
+  letter-spacing: $lspacing-2;
   text-transform: uppercase;
   font-family: $fontCdn;
 }

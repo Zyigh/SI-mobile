@@ -28,12 +28,17 @@ export default new Router({
             name: 'Home',
             component: Home
           },
-          {
-            path: 'meal',
-            name: 'MealDetail',
-            component: Meal,
-          }
         ]
+      },
+      {
+        path: '/meal',
+        name: 'MealDetail',
+        component: Meal,
+      },
+      {
+        path: '/mealform',
+        name: 'MealForm',
+        component: MealForm,
       }
     ]
 

@@ -4,13 +4,24 @@
   padding-bottom: .5rem;
 }
 
-.headpage__top {
-  text-align: right;
-  margin-bottom: 8rem;
-}
-
 .headpage__inner {
   padding-top: 3rem;
+}
+
+/**
+ * TOP BAR
+ */
+
+.headpage__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+}
+
+
+.headpage__back {
+
 }
 
 .headpage__reminder {
@@ -20,20 +31,21 @@
   font-family: $font;
 }
 
+/**
+ * TITLES
+ */
+
 .headtitle {
+  padding-top: 7rem;
   margin-bottom: 3rem;
 }
 
 .headpage__title {
     margin: 0;
-    font-family: $fontCdn;
-    font-weight: 300;
-    font-size: 3.4rem;
-    text-transform: uppercase;
+    @include title-lvl-1();
 }
 
 .headpage__subtitle {
   margin: 0;
-  font-family: $font;
-  font-size: 1.5rem;
+  @include title-lvl-2();
 }

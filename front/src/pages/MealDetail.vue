@@ -3,12 +3,13 @@
       <div class="headpage">
         <div class="page__inner headpage__inner">
           <div class="headpage__top">
+            <router-link to="/tabs/home" tag="span" class="headpage__back">retour</router-link>
             <span class="headpage__reminder">Réservation avant 14h !</span>
           </div>
 
           <div class="headtitle">
             <h1 class="headpage__title">{{ msg }}</h1>
-            <p class="headpage__subtitle">Aujourd'hui à 21h</p>
+            <p class="headpage__subtitle">Auj 21h</p>
           </div>
         </div>
       </div>
@@ -55,6 +56,10 @@
 
           <p>Ingrédients : comté, beaufort, emmental, vin blanc, ail, noix de muscade, fécule de maïs, sel, poivre </p>
         </div>
+
+        <router-link to="/mealform" tag="button" class="btn__orange--shadow btn__fab">Réserver</router-link>
+
+
 
 
       </div>

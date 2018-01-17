@@ -1,0 +1,23 @@
+.field {
+
+}
+
+.field__label {
+  display: block;
+  text-transform: uppercase;
+  font-family: $fontCdn;
+  font-size: 2.4rem;
+  letter-spacing: 1.5px;
+  margin-bottom: .5rem;
+}
+
+.field__input--text {
+  width: 100%;
+  border: 2px solid $main-color;
+  font-size: 2.4rem;
+  border-radius: 25px;
+  font-weight: lighter;
+  padding: .5rem 1rem;
+  font-family: $font;
+  box-sizing: border-box;
+}

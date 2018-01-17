@@ -7,3 +7,17 @@
 @mixin shadow--huge() {
   box-shadow: 0 2px 8px 0 rgba(0,0,0,.25);
 }
+
+@mixin title-lvl-1() {
+  font: $fregular $size-1 $fontCdn;
+  text-transform: uppercase;
+  letter-spacing: $lspacing;
+  line-height: initial;
+}
+
+@mixin title-lvl-2() {
+  font: $fregular $size-2 $fontCdn;
+  text-transform: uppercase;
+  letter-spacing: $lspacing-2;
+  line-height: initial;
+}

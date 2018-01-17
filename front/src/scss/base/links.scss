@@ -1,0 +1,12 @@
+.link__huge {
+  display: block;
+  text-transform: uppercase;
+  font-family: $fontCdn;
+  letter-spacing: $lspacing;
+  font-size: $size-1;
+}
+
+.link__huge--orange {
+  @extend .link__huge;
+  color: $main-color;
+}

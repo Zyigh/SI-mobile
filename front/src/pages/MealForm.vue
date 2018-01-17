@@ -1,19 +1,41 @@
 <template>
-    <div class="page">
-      <div class="headpage">
-        <div class="page__inner headpage__inner">
-          <div class="headpage__top">
-            <span class="headpage__reminder">Réservation avant 14h !</span>
+    <div class="mealform page">
+      <div class="headpage mealform__headpage">
+        <div class="page__inner">
+          <div class="mealform__headpage-top">
+            <router-link to="/meal" tag="span" class="headpage__back">retour</router-link>
           </div>
-
-          <div class="headtitle">
-            <h1 class="headtitle__title">{{ msg }}</h1>
-            <p class="headtitle__subtitle">Aujourd'hui à 21h</p>
-          </div>
+          <h1 class="headpage__title">{{ msg }}</h1>
         </div>
       </div>
-      <div class="page__inner meal__body">
-        <h2>yo</h2>
+      <div class="page__inner mealform__body">
+        <h2 class="title">plus qu’une pincée d’épices avant de savourer votre repas maison</h2>
+        <form class="mealform__form" action="index.html" method="post">
+          <div class="field">
+            <label for="" class="field__label">Prénom</label>
+            <input type="text" name="" value="" class="field__input--text">
+          </div>
+          <div class="field">
+            <label for="" class="field__label">Nom</label>
+            <input type="text" name="" value="" class="field__input--text">
+          </div>
+          <div class="field">
+            <label for="" class="field__label">Adresse email</label>
+            <input type="mail" name="" value=""  class="field__input--text">
+          </div>
+          <div class="field">
+            <label for="" class="field__label">Numéro de téléphone</label>
+            <input type="mail" name="" value=""  class="field__input--text">
+          </div>
+
+          <div class="btn__outer--centered mealform__form-footer">
+            <input type="submit" name="" value="S'inscrire" class="btn__orange--shadow">
+            <a href="#" class="link__huge--orange">Se connecter</a>
+          </div>
+
+
+        </form>
+
       </div>
     </div>
 

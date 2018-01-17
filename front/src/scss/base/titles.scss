@@ -31,3 +31,21 @@
   padding-bottom: 5px;
   border-bottom: 2px solid $main-color;
 }
+
+@mixin title-lvl-1() {
+  font: $fregular $size-1 $fontCdn;
+  text-transform: uppercase;
+  letter-spacing: $lspacing;
+  line-height: initial;
+}
+
+@mixin title-lvl-2() {
+  font: $fregular $size-2 $fontCdn;
+  text-transform: uppercase;
+  letter-spacing: $lspacing-2;
+  line-height: initial;
+}
+
+.title {
+  @include title-lvl-1();
+}
