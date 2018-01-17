@@ -5,11 +5,13 @@
     </v-ons-toolbar>
 
     <square-card></square-card>
+    <ctab-bar></ctab-bar>
   </v-ons-page>
 </template>
 
 <script>
 import SquareCard from './components/SquareCard'
+import CtabBar from './components/CtabBar'
 
 export default {
   name: 'app',
@@ -17,7 +19,8 @@ export default {
     msg: 'Fidmi'
   },
   components: {
-    SquareCard
+    SquareCard,
+    CtabBar
   }
 }
 </script>

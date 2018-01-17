@@ -35,18 +35,6 @@
         <v-ons-card @click="goTo('https://github.com/vuejs/awesome-vue')">awesome-vue</v-ons-card>
       </v-ons-col>
     </v-ons-row>
-
-    <nav class="ctabbar">
-      <div @click="switchPage('/meals')" class="ctabbar__link">
-        <span class="ctabbar__label">Mes repas</span>
-      </div>
-      <div @click="switchPage('/home')" class="ctabbar__link">
-        <span class="ctabbar__label">Accueil</span>
-      </div>
-      <div @click="switchPage('/profile')" class="ctabbar__link" v-bind:class="{ current: 'selected' }">
-        <span class="ctabbar__label">Mon profil</span>
-      </div>
-    </nav>
   </v-ons-page>
 </template>
 
@@ -108,11 +96,6 @@ export default {
   methods: {
     goTo(url) {
       window.open(url, "_blank");
-    },
-
-    switchPage(url) {
-      console.log(this.current);
-      this.current = !this.current;
     },
   }
 };
