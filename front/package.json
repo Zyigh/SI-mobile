@@ -19,7 +19,8 @@
     "onsenui": "~2.7.2",
     "sass-loader": "^6.0.6",
     "vue": "^2.5.0",
-    "vue-onsenui": "~2.3.0"
+    "vue-onsenui": "~2.3.0",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
