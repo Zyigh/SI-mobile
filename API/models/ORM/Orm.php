@@ -79,4 +79,11 @@ class Orm
 
         return $data;
     }
+
+    public function getFile($id)
+    {
+        $data = $this->buffer->getFile($id);
+
+        return $data;
+    }
 }

@@ -132,4 +132,15 @@ class Buffer
 
         return new Ranking($params);
     }
+
+    public function getFile()
+    {
+        $file = $this->query->getFile();
+        $params = [
+            "id" => $file["id"],
+            "name" => $file["name"]
+        ];
+
+        return new File($params);
+    }
 }

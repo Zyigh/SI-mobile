@@ -135,7 +135,7 @@ class Query
     public function getEventById($id)
     {
         $sql = "
-            SELECT `id`, `date`, `description`, `inscriptionDeadline`, `userId`, `title`, `maxGuests`, `file`, `picPath` FROM `event` WHERE `id`= :id
+            SELECT `id` FROM `event` WHERE `id`= :id
         ";
 
         return $this->database
@@ -147,7 +147,18 @@ class Query
     public function getRanking($id)
     {
         $sql = "
-            SELECT `id`, `user`, `score` FROM `ranking` WHERE `id` = :id
+            SELECT
+            `id`,
+            `user`,
+            `score`
+            FROM
+            `ranking`
+            INNER JOIN
+            `ranking`
+              ON
+            `ranking`.`id`=`user`.`ranking`
+            WHERE
+            `ranking`.`id`= :id
         ";
 
         return $this->database
@@ -155,4 +166,43 @@ class Query
             ->setBindingParams( [':id'=>["value" => $id, "type" => \PDO::PARAM_INT]])
             ->executeRequest();
     }
+
+    public function getFile($id)
+    {
+        $sql = "
+        SELECT
+        `id`,
+        `name`
+        FROM
+        `file`
+        INNER JOIN
+        `user`
+        ON
+        `file`.`id`=`user`.`file`
+        WHERE
+        `file`.`id`= :id
+        ";
+
+        return $this->database
+            ->prepareStmt($sql)
+            ->setBindingParams()
+            ->executeRequest([':id'=>["value"=>$id, "type" => \PDO::PARAM_INT]]);
+    }
+
+    public function getRegistred()
+    {
+        $sql = "
+        SELECT
+        `id`,
+        `guestId`,
+        `eventId`,
+        `guestsNum`,
+        `validated`
+        FROM
+        `registred`
+        WHERE
+        `guestsNum`
+        ";
+    }
+
 }
