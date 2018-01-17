@@ -6,15 +6,17 @@
     </div>
 
     <nav class="ctabbar">
-      <div @click="switchPage('meals')" class="ctabbar__link" v-bind:class="{ selected: current == 'meals' }">
-        <span class="ctabbar__label">Mes repas</span>
-      </div>
-      <div @click="switchPage('home')" class="ctabbar__link" v-bind:class="{ selected: current == 'home' }">
+      <router-link to="/tabs/meals" v-on:click.native="switchPage('/tabs/meals')" tag="div" class="ctabbar__link" v-bind:class="{ selected: current == '/tabs/meals' }">
+        <span class="ctabbar__label">Repas</span>
+      </router-link>
+
+      <router-link to="/tabs/home" v-on:click.native="switchPage('/tabs/home')" tag="div" class="ctabbar__link" v-bind:class="{ selected: current == '/tabs/home' }">
         <span class="ctabbar__label">Accueil</span>
-      </div>
-      <div @click="switchPage('profile')" class="ctabbar__link" v-bind:class="{ selected: current == 'profile' }">
+      </router-link>
+
+      <router-link to="/tabs/profile" v-on:click.native="switchPage('/tabs/profile')" tag="div" class="ctabbar__link" v-bind:class="{ selected: current == '/tabs/profile' }">
         <span class="ctabbar__label">Mon profil</span>
-      </div>
+      </router-link>
     </nav>
 
   </div>
@@ -25,12 +27,12 @@ export default {
   name: "ctabbar",
   data() {
     return {
-      current: 'home'
+      current: this.$route.path
     }
   },
   methods: {
     switchPage(url) {
-      this.current = url;
+      this.current = this.$route.path;
     }
   }
 };

@@ -1,14 +1,10 @@
 <template>
-  <v-ons-page>
-      <head-bar></head-bar>   
-      <div class="page__inner">
-        <!-- <v-ons-list v-for="meal in meals" :key="meal">
-          <v-ons-list-item></v-ons-list-item>
-        </v-ons-list> -->
-
-        <square-card></square-card>
-      </div>
-  </v-ons-page>
+  <div class="">
+    <head-bar></head-bar>
+    <div class="page__inner">
+      <square-card></square-card>
+    </div>
+  </div>
 </template>
 
 <script>

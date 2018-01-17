@@ -35,6 +35,16 @@
   @include title-lvl-1();
 }
 
+.title--bordered {
+  text-transform: uppercase;
+  @include title-lvl-2();
+  font-weight: 400;
+  padding-left: 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid $main-color;
+  margin-bottom: 1rem;
+}
+
 .title--white {
   @include title-lvl-1();
   // color: $white;

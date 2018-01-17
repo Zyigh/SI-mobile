@@ -22,3 +22,21 @@
   text-transform: uppercase;
   font-family: $fontCdn;
 }
+
+/**
+ * VERSION BIG
+ */
+
+.user--big {
+  text-align: center;
+  margin: 3rem 0 4rem;
+}
+
+.user__photo--big {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  width: 75px;
+  height: 75px;
+  background: #eee;
+  border-radius: 100px;
+}
