@@ -4,13 +4,13 @@
 import './scss/main.scss'
 
 import Vue from 'vue'
-// import VueResource from 'vue-resource'
+import VueResource from 'vue-resource'
 import router from './router'
 import App from './App'
 
 Vue.config.productionTip = false
 
-// Vue.use(VueResource)
+Vue.use(VueResource)
 
 // Vue.http.options.xhr = {withCredentials: true}
 // Vue.http.headers.common['Accept'] = 'application/json, text/plain, */*'
