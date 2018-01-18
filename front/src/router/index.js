@@ -66,6 +66,11 @@ export default new Router({
         component: EndMessage,
       },
       {
+        path: '/confirmation-sent',
+        name: 'EndMessage',
+        component: EndMessage,
+      },
+      {
         path: '/meal-invitations',
         name: 'MealInvitations',
         component: MealInvitations,

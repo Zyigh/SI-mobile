@@ -64,3 +64,11 @@ export default {
   }
 };
 </script>
+
+<style scroped>
+
+  .page__body {
+    padding-bottom: 4rem;
+  }
+
+</style>

@@ -14,7 +14,7 @@
             <li class="sq-list__item" v-for="meal in meals" :key="meal.id">
               <square-card v-bind:mealdata="meal"></square-card>
               <div class="btn__outer--centered">
-                <router-link to="/meal" tag="button" class="btn__orange--empty">Voir plus</router-link>
+                <router-link to="/meal-invitations" tag="button" class="btn__orange--empty">Voir plus</router-link>
               </div>
             </li>
           </ul>

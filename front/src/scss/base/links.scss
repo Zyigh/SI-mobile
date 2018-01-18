@@ -10,3 +10,8 @@
   @extend .link__huge;
   color: $main-color;
 }
+
+.link__huge--white {
+  @extend .link__huge;
+  color: $white;
+}

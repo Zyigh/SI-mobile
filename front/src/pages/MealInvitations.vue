@@ -20,7 +20,7 @@
           <span class="tag--lgreen">Végétarien</span>
           <span class="tag--dgreen">Halal</span>
         </div>
-        <p>Ingrédients : comté, beaufort, emmental, vin blanc, ail, noix de muscade, fécule de maïs, sel, poivre </p>
+        <p>Ingrédients : {{ ingredients }} </p>
 
         <section>
           <h2 class="list-title__title meal-invitations__title">Propositions</h2>
@@ -30,8 +30,8 @@
               <user name="Ombeline"></user>
 
               <div class="actions">
-                <button type="button" name="button" class="btn__orange--close"><i class="icomoon icon-plus"></i></button>
-                <button type="button" name="button" class="sqbtn__orange--empty"><i class="icomoon icon-checked"></i></button>
+                <router-link to="/confirmation-sent" tag="button" class="btn__orange--close"><i class="icomoon icon-plus"></i></router-link>
+                <router-link to="/confirmation-sent" tag="button" class="sqbtn__orange--empty"><i class="icomoon icon-checked"></i></router-link>
               </div>
             </div>
 
@@ -63,6 +63,7 @@ export default {
       mealName: 'Fondue savoyarde',
       nbPpl: 5,
       listEls: ['Des boissons', 'Des bisous', 'Un iPhone X'],
+      ingredients: 'comté, beaufort, emmental, vin blanc, ail, noix de muscade, fécule de maïs, sel, poivre',
     }
   },
   components: {
