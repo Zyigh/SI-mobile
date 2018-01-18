@@ -25,14 +25,13 @@ export default {
   name: "Home",
   mounted: function(){
     this.getMeals();
-    this.renderSectionTitle();
-
   },
   
   data() {
     return {
       meals: [],
       dates: [],
+      all: {},
       currentDate: moment(),
       eventDate: '',
       sectionTitle: ''
@@ -41,15 +40,39 @@ export default {
   
   methods: {
     getMeals: function() {
-      this.$http.get("http://localhost:3000/home").then(
+      return this.$http.get("http://localhost:3000/home").then(
         response => {
           var data = response.body;
           for (let i = 0; i < data.length; i++){
             let date =  moment.unix(data[i].date).format("DD/MM/YY");
+            let formattedToday = this.currentDate.format('DD/MM/YY');
+            let formattedTomorrow = this.currentDate.add(1, 'd').format('DD/MM/YY');
+
+            if (formattedToday == data[i]){
+              data[i].date_title = 'Aujourd\'hui';
+              console.log(data[i].date_title);
+            } else if (formattedTomorrow == data[i]){
+              data[i].date_title = 'Demain'
+            } else {
+              data[i].date_title = 'Le ' + data[i];
+            } 
 
             this.meals.push(data[i]);
             this.dates.push(date);
+
+            if (! this.all[date]) {
+              this.all = Object.assign({}, this.all, {
+                [date]: {
+                  title: data[i].cat_title,
+                  meals:[]
+                }
+              })
+            }
+
+            this.all[date].meals.push(data[i])
           }
+
+          console.log(this.all)
         }, response => {
           alert('Have not been able to retrieve data, please ask Hugo Medina to fix me');
         }
@@ -59,8 +82,6 @@ export default {
     renderSectionTitle: function(){
       var formattedToday = this.currentDate.format('DD/MM/YY');
       var formattedTomorrow = this.currentDate.add(1, 'd').format('DD/MM/YY');
-
-      console.log(this.dates);
 
       for (let i = 0; i < this.dates.length; i++){
         console.log(i);
