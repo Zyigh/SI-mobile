@@ -1,6 +1,25 @@
 .quote {
+  position: relative;
   width: 70%;
   margin: 0 auto;
   font-size: 1.5rem;
   font-family: $font;
+}
+
+.quote__icon {
+  position: absolute;
+  z-index: -1;
+  font-size: 3rem;
+  opacity: .3;
+}
+
+.quote__icon--left {
+ @extend .quote__icon;
+ left: -3rem;
+}
+
+.quote__icon--right {
+  @extend .quote__icon;
+  right: 0;
+  bottom: 0;
 }

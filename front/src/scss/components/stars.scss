@@ -1,7 +1,19 @@
 .stars {
-
+  line-height: 13px;
 }
 
 .stars__single {
+  font-size: 11px;
 
+  &:before {
+    color: #C1C1C1;
+  }
+}
+
+.stars__single--full {
+  @extend .stars__single;
+
+  &:before {
+    color: $body-color;
+  }
 }

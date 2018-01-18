@@ -18,22 +18,26 @@
         </div>
       </div>
       <div class="page__inner meal__body">
-        <div class="user section">
+        <div class="user section meal__s-user">
           <img src="" alt="" class="user__photo">
           <div class="user__infos">
             <span class="user__name">Ombeline</span>
             <div class="stars">
-              <span class="stars__single--full"></span>
-              <span class="stars__single--full"></span>
-              <span class="stars__single--full"></span>
-              <span class="stars__single--full"></span>
-              <span class="stars__single"></span>
+              <i class="stars__single--full icomoon icon-star"></i>
+              <i class="stars__single--full icomoon icon-star"></i>
+              <i class="stars__single--full icomoon icon-star"></i>
+              <i class="stars__single--full icomoon icon-star"></i>
+              <i class="stars__single icomoon icon-star"></i>
             </div>
           </div>
         </div>
 
         <div class="section">
-          <blockquote class="quote">Je veux partager les recettes de ma grand-mère et rencontrer des gens de tous horizons.</blockquote>
+          <blockquote class="quote">
+            <i class="icomoon icon-quotes-left quote__icon--left"></i>
+            Je veux partager les recettes de ma grand-mère et rencontrer des gens de tous horizons.
+            <i class="icomoon icon-quotes-right quote__icon--right"></i>
+          </blockquote>
         </div>
 
         <div class="section">
@@ -42,9 +46,9 @@
           </div>
 
           <ul class="list">
-            <li class="list__item">Des boissons</li>
-            <li class="list__item">Un dessert</li>
-            <li class="list__item">Un sourire</li>
+            <li class="list__item"><i class="list__item-icon icomoon icon-heart"></i> Des boissons</li>
+            <li class="list__item"><i class="list__item-icon icomoon icon-heart"></i> Un dessert</li>
+            <li class="list__item"><i class="list__item-icon icomoon icon-heart"></i> Un sourire</li>
           </ul>
         </div>
 

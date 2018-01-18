@@ -2,10 +2,7 @@
     <div class="mealform page">
       <div class="headpage mealform__headpage">
         <div class="page__inner">
-          <div class="mealform__headpage-top">
-            <router-link to="/meal" tag="span" class="headpage__back">retour</router-link>
-          </div>
-          <h1 class="headpage__title">Historique des repas organisés</h1>
+          <h1 class="headpage__title">Historique des repas <span class="text-medium">organisés</span></h1>
         </div>
       </div>
 
@@ -22,7 +19,7 @@
             </li>
           </ul>
         </section>
-        <section class="section">
+        <!-- <section class="section">
           <h2 class="title--bordered">Repas déjà passés</h2>
 
           <ul class="list sq-list">
@@ -32,7 +29,7 @@
               </div>
             </li>
           </ul>
-        </section>
+        </section> -->
       </div>
 
     </div>
