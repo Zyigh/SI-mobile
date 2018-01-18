@@ -52,6 +52,16 @@ class Query
             ->executeRequest();
     }
 
+    private function getData(String $sql, array $params): array
+    {
+        return $this->database
+            ->prepareStmt($sql)
+            ->setBindingParams(
+                $params
+            )
+            ->executeRequest();
+    }
+
     public function getEventsList(Int $offset): array
     {
         $sql = "SELECT
@@ -82,16 +92,11 @@ class Query
             ;"
         ;
 
-        return $this->database
-            ->prepareStmt($sql)
-            ->setBindingParams(
-                [":offset" => [
-                        "value" => $offset,
-                        "type" => \PDO::PARAM_INT
-                    ]
-                ]
-            )
-            ->executeRequest();
+        return $this->getData($sql, [":offset" => [
+                "value" => $offset,
+                "type" => \PDO::PARAM_INT
+            ]
+        ]);
     }
 
     public function getEvent(String $title)
@@ -126,15 +131,12 @@ class Query
               `event`.`title` = :title
             ;"
         ;
-        return $this->database
-            ->prepareStmt($sql)
-            ->setBindingParams([
-                ":title" => [
-                    "value" => $title,
-                    "type" => \PDO::PARAM_STR
-                ]
-            ])
-            ->executeRequest();
+        return $this->getData($sql, [
+            ":title" => [
+                "value" => $title,
+                "type" => \PDO::PARAM_STR
+            ]
+        ]);
     }
 
         /**
@@ -194,5 +196,73 @@ class Query
                 `registered`.`validated` = FALSE
             ;"
         ;
+
+        return $this->getData($sql, [
+            ":title" => [
+                "value" => $title,
+                "type" => \PDO::PARAM_STR
+            ]
+        ]);
+    }
+
+    public function eventsByUser(Int $id)
+    {
+        $sql = "
+            SELECT
+                `event`.`title`,
+                `event`.`title`,
+                `event`.`inscriptionDeadline`,
+                `user`.`id`
+            FROM
+                `event`
+            INNER JOIN
+                `registered`
+                ON 
+                    `registered`.`user` = `event`.`id`
+            WHERE
+                `registered`.`user` = :id
+            OR 
+                `event`.`user` = :id
+            ORDER BY
+                `event`.`date` ASC
+            ;
+        ";
+        return $this->getData($sql, [
+            ":id" => [
+                "value" => $id,
+                "type" => \PDO::PARAM_INT
+            ]
+        ]);
+    }
+
+    /**
+     * @note update schema
+     */
+    public function userDetails(Int $id)
+    {
+        $sql = "
+            SELECT
+                `description`,
+                `whishlist`,
+                `email`,
+                `phone`,
+                `location`.`address`,
+                `location`.`notes`
+            FROM
+                `user`
+            INNER JOIN
+                `location`
+                ON 
+                    `user`.`location `= `location`.`id`
+            WHERE
+                `user`.`id `= :id
+        ";
+
+        return $this->getData($sql, [
+            ":id" => [
+                "value" => $id,
+                "type" => \PDO::PARAM_INT
+            ]
+        ]);
     }
 }

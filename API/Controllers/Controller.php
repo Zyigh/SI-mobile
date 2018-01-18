@@ -38,6 +38,10 @@ class Controller
     protected function render(array $data, Int $status = 200): Response
     {
 
-        return $this->response->withHeader('Content-Type', 'application/json')->withStatus($status)->withJson($data);
+        return $this->response
+                    ->withHeader('Content-Type', 'application/json')
+                    ->withHeader('Access-Control-Allow-Origin', '*')
+                    ->withStatus($status)
+                    ->withJson($data);
     }
 }
