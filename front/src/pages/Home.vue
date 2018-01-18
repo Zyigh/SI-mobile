@@ -2,63 +2,69 @@
   <div class="page">
       <head-bar></head-bar>   
       <div class="page__inner">
+        <h2 class="sq-list__title">Aujourd'hui</h2>
         <ul class="list sq-list">
           <li class="sq-list__item" v-for="meal in meals" :key="meal.id">
             <square-card v-bind:mealdata="meal"></square-card>
           </li>
         </ul>
-        <!-- <square-card></square-card> -->
       </div>
   </div>
 </template>
 
 <script>
-import HeadBar from '../components/HeadBar.vue';
-import SquareCard from '../components/SquareCard.vue';
+import HeadBar from "../components/HeadBar.vue";
+import SquareCard from "../components/SquareCard.vue";
 
 export default {
   name: "Home",
+  mounted: function(){
+    // this.getMeals();
+  },
   data() {
     return {
       meals: [
         {
           hostName: 'Salas',
           hostSurname: 'Olivia',
-          mealName: 'Blanquette de veau',
+          mealName: 'blanquette de veau',
           date: '16/01/2018',
-          hour: '19h00',
+          hour: '19h',
           placesLeft: 2,
           imgUrl: ""
         },
         {
-          hostName: 'Salas',
-          hostSurname: 'Ombeline',
-          mealName: 'Blanquette de veau',
+          hostName: 'Sayarath',
+          hostSurname: 'Alison',
+          mealName: 'Boeuf bourguignon',
           date: '16/01/2018',
-          hour: '19h00',
+          hour: '19h',
           placesLeft: 2,
           imgUrl: ""
         },
         {
-          hostName: 'Salas',
+          hostName: 'Reininger',
           hostSurname: 'Ombeline',
-          mealName: 'Blanquette de veau',
+          mealName: 'Pot-au-feu',
           date: '16/01/2018',
-          hour: '19h00',
-          placesLeft: 2,
-          imgUrl: ""
-        },
-        {
-          hostName: 'Salas',
-          hostSurname: 'Ombeline',
-          mealName: 'Blanquette de veau',
-          date: '16/01/2018',
-          hour: '19h00',
+          hour: '19h',
           placesLeft: 2,
           imgUrl: ""
         }
       ]
-    }
+    };
+  },
+  methods: {
+    // getMeals: function() {
+    //   this.$http.get("http://localhost:3000/home").then(
+    //     response => {
+    //       alert(response);
+    //     },
+    //     response => {
+    //       alert('no');
+    //     }
+    //   );
+    // }
   },
   components: {
     HeadBar,

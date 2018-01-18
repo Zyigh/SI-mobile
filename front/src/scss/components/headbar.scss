@@ -1,0 +1,12 @@
+.headbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: $main-color;
+}
+
+.headbar__add{
+    padding: 15px 20px;
+    font-size: 2.8rem;
+}

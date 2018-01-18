@@ -4,6 +4,17 @@
     flex-wrap: wrap;
 } 
 
+.sq-list__title {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $black;
+    border-bottom: 2px solid $main-color;
+}
+
 .sq-list__item {
     width: 47.5%;
     
@@ -15,6 +26,7 @@
 
 .sq-card {
     padding: 0;
+    margin-bottom: 15px;
     font-family: $font;
     border-radius: 0;
     box-shadow: none;
