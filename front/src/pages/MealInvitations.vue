@@ -10,10 +10,10 @@
       </div>
       <div class="page__inner page__body">
         <div class="headtitle meal-invitations__headtitle">
-          <h1 class="headpage__title--dark">Fondue Savoyarde</h1>
+          <h1 class="headpage__title--dark">{{ mealName }}</h1>
           <div class="headpage__subtitles">
             <span class="headpage__subtitle--dark">Auj 11h</span>
-            <span class="headpage__subtitle--dark">5 <i class="icomoon icon-fork-knife icon-fork-knife--dark"></i> restants</span>
+            <span class="headpage__subtitle--dark">{{ nbPpl }} <i class="icomoon icon-fork-knife icon-fork-knife--dark"></i> restants</span>
           </div>
         </div>
         <div class="tag__list">
@@ -27,7 +27,7 @@
 
           <div class="proposition">
             <div class="proposition__stack">
-              <user></user>
+              <user name="Ombeline"></user>
 
               <div class="actions">
                 <button type="button" name="button" class="btn__orange--close"><i class="icomoon icon-plus"></i></button>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="proposition__stack">
-              <list></list>
+              <list :elements="listEls"></list>
 
               <div class="guest">
                 <span class="guest__number">2</span>
@@ -59,7 +59,10 @@ export default {
   name: "MealInvitations",
   data() {
     return {
-      msg: 'Fondue savoyarde chez Alison'
+      msg: 'Fondue savoyarde chez Alison',
+      mealName: 'Fondue savoyarde',
+      nbPpl: 5,
+      listEls: ['Des boissons', 'Des bisous', 'Un iPhone X'],
     }
   },
   components: {

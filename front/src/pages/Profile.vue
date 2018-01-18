@@ -2,41 +2,38 @@
     <div class="profile page">
       <div class="headpage mealform__headpage">
         <div class="page__inner">
-          <h1 class="headpage__title">{{ msg }}</h1>
+          <h1 class="headpage__title">{{ pageTitle }}</h1>
         </div>
       </div>
       <div class="page__inner page__body">
         <div class="user--big">
           <img src="" alt="" class="user__photo--big">
-          <h1 class="title">Alison Sayarath</h1>
+          <h1 class="title">{{ name }}</h1>
         </div>
         <div class="section">
           <h2 class="title--bordered">Biographie</h2>
-          <p>Je veux partager les recettes de ma grand-mère et rencontrer des gens de tous horizons.</p>
+          <p>{{ bio }}</p>
+
         </div>
         <div class="section">
           <h2 class="title--bordered">Wishlist</h2>
-          <ul class="list">
-            <li class="list__item">Des boissons</li>
-            <li class="list__item">Un dessert</li>
-            <li class="list__item">Un sourire</li>
-          </ul>
+          <list :elements="wishlist"></list>
         </div>
         <div class="section">
           <h2 class="title--bordered">Adresse mail</h2>
-          <p>alisonsayarath@gmail.com</p>
+          <p>{{ mail }}</p>
         </div>
         <div class="section">
           <h2 class="title--bordered">Numéro de téléphone</h2>
-          <p>+33 7 70 67 51 73</p>
+          <p>+{{ phone }}</p>
         </div>
         <div class="section">
           <h2 class="title--bordered">Adresse postale</h2>
-          <p>14 rue de Munchen <br/> 75015 Paris</p>
+          <p>{{ address }}</p>
         </div>
         <div class="section">
           <h2 class="title--bordered">Complément d'adresse</h2>
-          <p>Sonnez à l’interphone au nom « Sayarath », deuxième étage à gauche, au fond.</p>
+          <p>{{ addressComplement }}</p>
         </div>
       </div>
     </div>
@@ -44,12 +41,26 @@
 </template>
 
 <script>
+
+import List from '../components/List.vue';
+
 export default {
   name: "Profile",
   data() {
     return {
-      msg: 'Profil'
+      pageTitle: 'Profil',
+      name: 'Alison Sayarath',
+      img: '',
+      bio: 'Je veux partager les recettes de ma grand-mère et rencontrer des gens de tous horizons.',
+      wishlist: ['Des coucous', 'Des kikous', 'Des lampes de torches'],
+      mail: 'alisonsayarath@gmail.com',
+      phone: '7 70 67 51 73',
+      address: '14 rue de Munchen, 75015 Paris',
+      addressComplement: 'Sonnez à l’interphone au nom « Sayarath », deuxième étage à gauche, au fond.'
     }
+  },
+  components: {
+    List
   }
 };
 </script>

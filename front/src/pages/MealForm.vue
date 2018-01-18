@@ -10,7 +10,7 @@
 
           <div class="headtitle">
             <h1 class="headpage__title">{{ msg }}</h1>
-            <p class="headpage__subtitle">Auj 21h</p>
+            <p class="headpage__subtitle">Auj {{ timeLimit }}</p>
           </div>
         </div>
       </div>
@@ -21,9 +21,9 @@
             <label for="" class="field__label--spacer">Nombre de personnes</label>
 
             <div class="field__btns">
-              <span class="field__btns-single">-</span>
-              <span class="field__btns-value">1</span>
-              <span class="field__btns-single">+</span>
+              <span class="field__btns-single" @click="removePeople()">-</span>
+              <span class="field__btns-value">{{ nbPeople }}</span>
+              <span class="field__btns-single" @click="addPeople()">+</span>
             </div>
           </div>
 
@@ -34,7 +34,7 @@
           </div>
 
           <div class="btn__outer--centered">
-            <input type="submit" name="" value="Envoyer" class="btn__orange--shadow">
+            <router-link to="/invitation-sent" tag="button" class="btn__orange--shadow">Envoyer</router-link>
           </div>
 
         </form>
@@ -49,7 +49,23 @@ export default {
   name: "MealForm",
   data() {
     return {
-      msg: 'Fondue savoyarde chez Alison'
+      msg: 'Fondue savoyarde chez Alison',
+      timeLimit: '14h',
+      nbPeople: 1
+    }
+  },
+  methods: {
+    removePeople() {
+      if (this.nbPeople < 2) {
+        return;
+      }
+
+      this.nbPeople -= 1;
+    },
+    addPeople() {
+      this.nbPeople += 1;
+
+      // condition, si nbPeople > au nbppl maximum
     }
   }
 };

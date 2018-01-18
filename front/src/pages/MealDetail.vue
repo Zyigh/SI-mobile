@@ -5,31 +5,21 @@
           <div class="headpage__top">
             <router-link to="/tabs/home" tag="i" class="icomoon icon-arrow-back"></router-link>
 
-            <span class="headpage__reminder">Réservation avant 14h !</span>
+            <span class="headpage__reminder">Réservation avant {{ timeLimit }} !</span>
           </div>
 
           <div class="headtitle">
             <h1 class="headpage__title">{{ msg }}</h1>
             <div class="headpage__subtitles">
               <span class="headpage__subtitle">Auj 21h</span>
-              <span class="headpage__subtitle">5 <i class="icomoon icon-fork-knife headpage__icon"></i> restants</span>
+              <span class="headpage__subtitle">{{ nbPpl }} <i class="icomoon icon-fork-knife headpage__icon"></i> restants</span>
             </div>
           </div>
         </div>
       </div>
       <div class="page__inner meal__body">
-        <div class="user section meal__s-user">
-          <img src="" alt="" class="user__photo">
-          <div class="user__infos">
-            <span class="user__name">Ombeline</span>
-            <div class="stars">
-              <i class="stars__single--full icomoon icon-star"></i>
-              <i class="stars__single--full icomoon icon-star"></i>
-              <i class="stars__single--full icomoon icon-star"></i>
-              <i class="stars__single--full icomoon icon-star"></i>
-              <i class="stars__single icomoon icon-star"></i>
-            </div>
-          </div>
+        <div class="section meal__s-user">
+          <user name="Ombeline"></user>
         </div>
 
         <div class="section">
@@ -80,7 +70,9 @@ export default {
   name: "MealDetail",
   data() {
     return {
-      msg: 'Fondue savoyarde chez Alison'
+      msg: 'Fondue savoyarde chez Alison',
+      timeLimit: '14h',
+      nbPpl: 5,
     }
   },
   components: {
