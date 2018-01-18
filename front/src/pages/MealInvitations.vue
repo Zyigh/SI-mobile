@@ -3,17 +3,17 @@
       <div class="headpage mealform__headpage">
         <div class="page__inner">
           <div class="mealform__headpage-top">
-            <router-link to="/meal" tag="i" class="icomoon icon-arrow-back"></router-link>
+            <router-link to="/meal" tag="i" class="icomoon icon-arrow-back headpage__back"></router-link>
           </div>
           <h1 class="headpage__title">{{ msg }}</h1>
         </div>
       </div>
       <div class="page__inner page__body">
         <div class="headtitle meal-invitations__headtitle">
-          <h1 class="headpage__title">Fondue Savoyarde</h1>
+          <h1 class="headpage__title--dark">Fondue Savoyarde</h1>
           <div class="headpage__subtitles">
-            <span class="headpage__subtile">Auj 11h</span>
-            <span class="headpage__subtitle">5 <i class="icomoon icon-fork-knife icon-fork-knife--dark"></i> restants</span>
+            <span class="headpage__subtitle--dark">Auj 11h</span>
+            <span class="headpage__subtitle--dark">5 <i class="icomoon icon-fork-knife icon-fork-knife--dark"></i> restants</span>
           </div>
         </div>
         <div class="tag__list">
@@ -27,31 +27,16 @@
 
           <div class="proposition">
             <div class="proposition__stack">
-              <div class="user">
-                <img src="" alt="" class="user__photo">
-                <div class="user__infos">
-                  <span class="user__name">Ombeline</span>
-                  <div class="stars">
-                    <span class="stars__single--full"></span>
-                    <span class="stars__single--full"></span>
-                    <span class="stars__single--full"></span>
-                    <span class="stars__single--full"></span>
-                    <span class="stars__single"></span>
-                  </div>
-                </div>
-              </div>
+              <user></user>
 
               <div class="actions">
-                <button type="button" name="button" class="btn__orange--virgin">x</button>
-                <button type="button" name="button" class="sqbtn__orange--empty">x</button>
+                <button type="button" name="button" class="btn__orange--close"><i class="icomoon icon-plus"></i></button>
+                <button type="button" name="button" class="sqbtn__orange--empty"><i class="icomoon icon-checked"></i></button>
               </div>
             </div>
 
             <div class="proposition__stack">
-              <ul class="list">
-                <li class="list__item">Des boissons</li>
-                <li class="list__item">Un dessert</li>
-              </ul>
+              <list></list>
 
               <div class="guest">
                 <span class="guest__number">2</span>
@@ -66,12 +51,20 @@
 </template>
 
 <script>
+
+import User from '../components/User.vue';
+import List from '../components/List.vue';
+
 export default {
   name: "MealInvitations",
   data() {
     return {
       msg: 'Fondue savoyarde chez Alison'
     }
+  },
+  components: {
+    User,
+    List
   }
 };
 </script>

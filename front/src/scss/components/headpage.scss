@@ -19,11 +19,6 @@
   text-align: right;
 }
 
-
-.headpage__back {
-
-}
-
 .headpage__reminder {
   font-weight: 500;
   font-size: 1.4rem;
@@ -47,6 +42,11 @@
     color: $white;
 }
 
+.headpage__title--dark {
+  @extend .headpage__title;
+  color: $body-color;
+}
+
 .headpage__subtitles {
   display: flex;
   justify-content: space-between;
@@ -57,6 +57,11 @@
   margin: 0;
   @include title-lvl-2();
   color: $white;
+}
+
+.headpage__subtitle--dark {
+  @extend .headpage__subtitle;
+  color: $body-color;
 }
 
 .headpage__icon {

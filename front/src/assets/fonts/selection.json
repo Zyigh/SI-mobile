@@ -4,6 +4,39 @@
     {
       "icon": {
         "paths": [
+          "M614.4 409.6h409.6v204.8h-409.6v409.6h-204.8v-409.6h-409.6v-204.8h409.6v-409.6h204.8v409.6z"
+        ],
+        "attrs": [
+          {
+            "fill": "rgb(244, 134, 50)"
+          }
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "plus"
+        ]
+      },
+      "attrs": [
+        {
+          "fill": "rgb(244, 134, 50)"
+        }
+      ],
+      "properties": {
+        "order": 14,
+        "id": 0,
+        "name": "plus",
+        "prevSize": 32,
+        "code": 59660
+      },
+      "setIdx": 0,
+      "setId": 5,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M190.938-35.779l155.159-155.159 848.090 848.090-537.036 537.036-155.159-155.159 381.877-381.877z"
         ],
         "attrs": [
@@ -38,7 +71,7 @@
         "prevSize": 32,
         "code": 59654
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 4,
       "iconIdx": 0
     },
@@ -79,7 +112,7 @@
         "prevSize": 32,
         "code": 59655
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 4,
       "iconIdx": 1
     },
@@ -129,7 +162,7 @@
         "prevSize": 32,
         "code": 59656
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 4,
       "iconIdx": 2
     },
@@ -172,7 +205,7 @@
         "prevSize": 32,
         "code": 59657
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 4,
       "iconIdx": 3
     },
@@ -215,7 +248,7 @@
         "prevSize": 32,
         "code": 59658
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 4,
       "iconIdx": 4
     },
@@ -249,7 +282,7 @@
         "prevSize": 32,
         "code": 59659
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 4,
       "iconIdx": 5
     },
@@ -304,7 +337,7 @@
           59653
         ]
       },
-      "setIdx": 2,
+      "setIdx": 3,
       "setId": 2,
       "iconIdx": 0
     },
@@ -344,7 +377,7 @@
         "prevSize": 32,
         "code": 59648
       },
-      "setIdx": 2,
+      "setIdx": 3,
       "setId": 2,
       "iconIdx": 1
     },
@@ -395,7 +428,7 @@
         "prevSize": 32,
         "code": 59649
       },
-      "setIdx": 2,
+      "setIdx": 3,
       "setId": 2,
       "iconIdx": 2
     },
@@ -436,7 +469,7 @@
         "prevSize": 32,
         "code": 59650
       },
-      "setIdx": 2,
+      "setIdx": 3,
       "setId": 2,
       "iconIdx": 3
     },
@@ -487,7 +520,7 @@
         "prevSize": 32,
         "code": 59651
       },
-      "setIdx": 2,
+      "setIdx": 3,
       "setId": 2,
       "iconIdx": 4
     }

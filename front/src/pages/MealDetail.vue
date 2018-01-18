@@ -67,21 +67,24 @@
 
         <router-link to="/meal-form" tag="button" class="btn__orange--shadow btn__fab">Réserver</router-link>
 
-
-
-
       </div>
     </div>
 
 </template>
 
 <script>
+
+import User from '../components/User.vue';
+
 export default {
   name: "MealDetail",
   data() {
     return {
       msg: 'Fondue savoyarde chez Alison'
     }
+  },
+  components: {
+    User
   }
 };
 </script>
