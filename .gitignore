@@ -427,3 +427,4 @@ ENV/
 
 # Rope project settings
 .ropeproject
+models/database/Connect.php

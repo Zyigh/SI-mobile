@@ -1,2 +1,2 @@
 <?php
-require_once sprintf("%s/../index.php", __DIR__);
+require_once "../index.php";
