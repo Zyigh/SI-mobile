@@ -27,7 +27,9 @@ class Orm
      */
     public $buffer;
 
-    private function __construct(){}
+    private function __construct(){
+        $this->buffer = new Buffer();
+    }
 
     public static function getInstance(): self
     {
@@ -38,10 +40,22 @@ class Orm
         return self::$instance;
     }
 
+    public function getEvent(String $title): array
+    {
+        return $this->buffer->getSingleEvent($title);
+    }
+
+    public function getHomeEvents(Int $offset): array
+    {
+        return $this->buffer->getNextTenEvents($offset);
+    }
+
     public function test():array
     {
         $data = $this->buffer->test();
 
         return $data;
     }
+
+
 }

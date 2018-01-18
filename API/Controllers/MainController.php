@@ -14,20 +14,17 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 class MainController extends Controller
 {
-    public function indexAction(array $args) : Response
+    public function indexAction(Int $page = 0) : Response
     {
-        try {
-            dump(Connect::getInstance()->test());
-            //$data = Connect::getInstance()->prepareStmt("SELECT * FROM user")->executeRequest();
-            //dump($data);
-        } catch (\Exception $e) {
-            dump($e);
-        }
-        exit;
-        $data = $this->orm->test();
-
         return $this->render(
-            $data
+            $this->orm->getHomeEvents($page)
+        );
+    }
+
+    public function eventAction(String $title): Response
+    {
+        return $this->render(
+            $this->orm->getEvent($title)
         );
     }
 }

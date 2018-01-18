@@ -67,7 +67,7 @@ class Connect
         $result = [];
         if (!is_null($this->stmt)) {
             $this->stmt->execute();
-            $result = $this->stmt->fetchAll(PDO::FETCH_OBJ);
+            $result = $this->stmt->fetchAll(PDO::FETCH_ASSOC);
             $this->stmt = null;
         }
         return $result;
