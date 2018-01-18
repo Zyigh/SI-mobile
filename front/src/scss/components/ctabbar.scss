@@ -2,7 +2,7 @@
   display: flex;
   position: fixed;
   margin: auto;
-  max-width: 280px;
+  max-width: 240px;
   left: 0;
   right: 0;
   bottom: 2rem;
@@ -17,7 +17,7 @@
   width: 30%;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   color: $main-color;
 
   &.selected {
@@ -27,19 +27,15 @@
     color: #fff;
   }
 
-  &.selected .ctabbar__label {
+  &.selected .ctabbar__icon:before {
     color: $white;
   }
 
 }
 
-.ctabbar__label {
-  text-transform: uppercase;
-  font-family: $fontCdn;
-  letter-spacing: $lspacing-2;
-  font-size: 1.7rem;
-}
-
 .ctabbar__icon {
-
+  font-size: 3rem;
+  &:before {
+    color: $main-color;
+  }
 }

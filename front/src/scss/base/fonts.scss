@@ -70,7 +70,7 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
@@ -80,12 +80,12 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   .icon-add-event .path1:before {
     content: "\e904";
     color: rgb(255, 255, 255);
@@ -111,4 +111,3 @@
     content: "\e903";
     color: #fff;
   }
-  

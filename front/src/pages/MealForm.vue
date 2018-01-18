@@ -3,7 +3,8 @@
       <div class="headpage">
         <div class="page__inner headpage__inner">
           <div class="headpage__top">
-            <router-link to="/tabs/home" tag="span" class="headpage__back">retour</router-link>
+            <router-link to="/tabs/home" tag="i" class="icomoon icon-arrow-back"></router-link>
+
             <span class="headpage__reminder">Réservation avant 14h !</span>
           </div>
 

@@ -17,7 +17,7 @@
             <li class="sq-list__item" v-for="meal in meals" :key="meal.id">
               <square-card v-bind:mealdata="meal"></square-card>
               <div class="btn__outer--centered">
-                <router-link to="/mealform" tag="button" class="btn__orange--empty">Retour</router-link>
+                <router-link to="/meal" tag="button" class="btn__orange--empty">Voir plus</router-link>
               </div>
             </li>
           </ul>
@@ -28,7 +28,7 @@
           <ul class="list sq-list">
             <li class="sq-list__item" v-for="meal in meals" :key="meal.id">
               <div class="btn__outer--centered">
-                <router-link to="/mealform" tag="button" class="btn__orange--empty">Retour</router-link>
+                <router-link to="/meal" tag="button" class="btn__orange--empty">Voir plus</router-link>
               </div>
             </li>
           </ul>

@@ -7,15 +7,15 @@
 
     <nav class="ctabbar">
       <router-link to="/tabs/my-meals" v-on:click.native="switchPage('/tabs/my-meals')" tag="div" class="ctabbar__link" v-bind:class="{ selected: current == '/tabs/my-meals' }">
-        <span class="ctabbar__label">Repas</span>
+        <i class="icomoon icon-reservation ctabbar__icon"></i>
       </router-link>
 
       <router-link to="/tabs/home" v-on:click.native="switchPage('/tabs/home')" tag="div" class="ctabbar__link" v-bind:class="{ selected: current == '/tabs/home' }">
-        <span class="ctabbar__label">Accueil</span>
+          <i class="icomoon icon-fork-knife ctabbar__icon"></i>
       </router-link>
 
       <router-link to="/tabs/profile" v-on:click.native="switchPage('/tabs/profile')" tag="div" class="ctabbar__link" v-bind:class="{ selected: current == '/tabs/profile' }">
-        <span class="ctabbar__label">Mon profil</span>
+        <i class="icomoon icon-user ctabbar__icon"></i>
       </router-link>
     </nav>
 
