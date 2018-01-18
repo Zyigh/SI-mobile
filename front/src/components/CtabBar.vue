@@ -1,13 +1,14 @@
 <template>
   <nav class="ctabbar">
     <div @click="switchPage('meals')" class="ctabbar__link" v-bind:class="{ selected: current == 'meals' }">
-      <span class="ctabbar__label">Mes repas</span>
+      <span class="ctabbar__label">Mes yo</span>
     </div>
     <div @click="switchPage('home')" class="ctabbar__link" v-bind:class="{ selected: current == 'home' }">
-      <span class="ctabbar__label">Accueil</span>
+      <i class="icomoon icon-fork-knife icon-fork-knife--dark"></i>
     </div>
     <div @click="switchPage('profile')" class="ctabbar__link" v-bind:class="{ selected: current == 'profile' }">
-      <span class="ctabbar__label">Mon profil</span>
+      salut
+      <i class="icomoon icon-fork-knife icon-fork-knife--dark"></i>
     </div>
   </nav>
 </template>

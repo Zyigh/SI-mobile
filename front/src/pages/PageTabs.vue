@@ -6,7 +6,7 @@
     </div>
 
     <nav class="ctabbar">
-      <router-link to="/tabs/meals" v-on:click.native="switchPage('/tabs/meals')" tag="div" class="ctabbar__link" v-bind:class="{ selected: current == '/tabs/meals' }">
+      <router-link to="/tabs/my-meals" v-on:click.native="switchPage('/tabs/my-meals')" tag="div" class="ctabbar__link" v-bind:class="{ selected: current == '/tabs/my-meals' }">
         <span class="ctabbar__label">Repas</span>
       </router-link>
 

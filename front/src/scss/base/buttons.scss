@@ -32,14 +32,21 @@
 }
 
 .btn__orange--empty {
+  @extend .btn;
+  width: 90%;
+
   border: 2px solid $main-color;
   background: none;
   font-size: $size-2;
-  width: 40px;
-  height: 40px;
-  border-radius: 25px;
   text-align: center;
   color: $main-color;
+  border-radius: 25px;
+}
+
+.sqbtn__orange--empty {
+
+  width: 40px;
+  height: 40px;
 }
 
 .btn__fab {

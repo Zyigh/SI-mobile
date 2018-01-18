@@ -1,7 +1,3 @@
-body {
-  font-family: $fontCdn;
-}
-
 .page {
   padding-bottom: 4rem;
 }
@@ -10,7 +6,7 @@ body {
     padding: 0 20px;
 }
 
-.pack__body {
+.page__body {
   padding-top: 3.5rem;
 }
 
@@ -20,4 +16,8 @@ body {
 
 .section {
   margin-bottom: 2.5rem;
+}
+
+.sq-list__item {
+  margin-bottom: 1rem;
 }

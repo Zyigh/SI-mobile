@@ -1,10 +1,14 @@
 .meal-invitations {
-
+  .icon-fork-knife--dark {
+    font-size: 1.8rem;
+    &:before {
+      color: $body-color !important;
+    }
+  }
 }
 
 .meal-invitations__headtitle {
-  padding-top: 4rem;
-
+  padding-top: 1rem;
   .headpage__subtitles {
     margin-bottom: 3rem;
   }

@@ -12,8 +12,8 @@
         <div class="headtitle meal-invitations__headtitle">
           <h1 class="headpage__title">Fondue Savoyarde</h1>
           <div class="headpage__subtitles">
-            <span class="headpage__subtitle">Auj 11h</span>
-            <span class="headpage__subtitle">5 restants</span>
+            <span class="headpage__subtile">Auj 11h</span>
+            <span class="headpage__subtitle">5 <i class="icomoon icon-fork-knife icon-fork-knife--dark"></i> restants</span>
           </div>
         </div>
         <div class="tag__list">
@@ -43,7 +43,7 @@
 
               <div class="actions">
                 <button type="button" name="button" class="btn__orange--virgin">x</button>
-                <button type="button" name="button" class="btn__orange--empty">x</button>
+                <button type="button" name="button" class="sqbtn__orange--empty">x</button>
               </div>
             </div>
 
@@ -55,7 +55,7 @@
 
               <div class="guest">
                 <span class="guest__number">2</span>
-                <span class="guest__icon"></span>
+                <span class="guest__icon"><i class="icomoon icon-fork-knife icon-fork-knife--dark"></i></span>
               </div>
             </div>
           </div>

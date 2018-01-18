@@ -1,8 +1,8 @@
 <template>
   <div class="page">
-      <head-bar></head-bar>   
+      <head-bar></head-bar>
       <div class="page__inner">
-        <h2 class="sq-list__title">Aujourd'hui</h2>
+        <h2 class="title--bordered">Aujourd'hui</h2>
         <ul class="list sq-list">
           <li class="sq-list__item" v-for="meal in meals" :key="meal.id">
             <square-card v-bind:mealdata="meal"></square-card>

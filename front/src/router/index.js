@@ -9,6 +9,7 @@ import MealForm from '../pages/MealForm.vue'
 import PageTabs from '../pages/PageTabs'
 import EndMessage from '../pages/EndMessage'
 import MealInvitations from '../pages/MealInvitations'
+import MyMeals from '../pages/MyMeals'
 import Profile from '../pages/Profile'
 
 Vue.use(Router);
@@ -36,7 +37,12 @@ export default new Router({
             path: 'profile',
             name: 'Profile',
             component: Profile,
-          }
+          },
+          {
+            path: 'my-meals',
+            name: 'MyMeals',
+            component: MyMeals,
+          },
         ]
       },
       {

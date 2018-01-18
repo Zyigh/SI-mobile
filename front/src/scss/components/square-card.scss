@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-} 
+}
 
 .sq-list__title {
     padding-bottom: 5px;
@@ -17,11 +17,11 @@
 
 .sq-list__item {
     width: 47.5%;
-    
+
     &:nth-child(2n+2){
         padding-left: 1rem;
     }
-} 
+}
 
 
 .sq-card {
@@ -58,9 +58,7 @@
     align-items: center;
     padding: 3% 5%;
     color: $white;
-    font-family: $fontCdn;
-    font-size: 2.4rem;
-    line-height: 2.5rem;
+    @include title-lvl-2();
     background: $main-color;
 }
 .sq-card__infos .date {
@@ -71,7 +69,7 @@
 .sq-card__infos .icon-fork-knife {
     font-size: 1.8rem;
     margin-left: 2px;
-} 
+}
 
 .sq-card__desc {
     padding: 5%;
@@ -84,4 +82,3 @@
         font-weight: 500;
     }
 }
-
