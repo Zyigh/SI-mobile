@@ -1,6 +1,6 @@
 <template>
   <header class="headbar">
-    <h1>Fidmi à <span class="city">Paris</span></h1>
+    <h1>Fidmi à <span class="headbar__city">Paris</span></h1>
   </header>
 </template>
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="24px" viewBox="0 0 19 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icons / Normal/ User</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Common-/-Nav-bar-/-Home-active" transform="translate(-151.000000, -12.000000)" fill-rule="nonzero" fill="#F48632">
+            <g id="Icons-/-Normal-/-User" transform="translate(151.000000, 12.000000)">
+                <ellipse id="Oval" cx="9.45031296" cy="6.05794635" rx="5.46617347" ry="5.47515264"></ellipse>
+                <path d="M18.8788859,23.6703608 C18.8788859,23.6703608 18.8788859,23.9257909 18.8788859,18.8244033 C18.8788859,13.7230157 13.3197846,13.6292137 13.3197846,13.6292137 L5.5812015,13.6292137 C5.5812015,13.6292137 0.0221001986,13.6912673 0.0221001986,18.8244033 C0.0221001986,23.9261517 0.0221001986,23.6703608 0.0221001986,23.6703608 L18.8788859,23.6703608 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
